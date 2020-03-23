@@ -46,6 +46,12 @@ more code
 
 Adding "CLIP: " to the start of your code is very important.
 
+## Resizing Images (and more)
+
+If you want to resize an image you can add `?cropResize=width,height` to the end of your image URL. You must provide both numbers, but cropResize will scale the image so that it fits within the box you have specified but does not necessarily fill that box. (It will also cut off any empty space, so if you are resizing an image with the original dimensions of 400,400, `?cropResize=100,1000` and `?cropResize=200,100` should have no difference. This is the most likely function you will want to use, but the [Grav documentation](https://learn.getgrav.org/16/content/media) has information on a number of other functions.
+
+Example usage for an image named `my-image.png` within the folder of the page you are displaying it: `![alt text](my-image.png?cropResize=300,300)`
+
 ## Updating
 
 Remember to change the date of last update on the first (intro) page. If you are updating a work that someone else has written, check for policy of how to write authors.
