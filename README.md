@@ -1,6 +1,6 @@
 # Template Info
 
-How to use the DS Tutorials Grav template once it is set up. 
+How to use the DS Tutorials Grav template once it is set up. To set up, you must have access to the [tutorial template repository](https://github.com/TheoAcker12/digital-scholarship-tutorial).
 
 Before following these instructions, make sure that a Digital Scholarship staff member has set up a Grav website using the Digital Scholarship Tutorial template. They will need a short title for the URL and the GitHub repository (e.g. grav, acrgis-storymaps-2020). Style rules: No capital letters, spaces, or special symbols. Only letters and numbers, with words separated by dashes.
 
