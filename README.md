@@ -10,17 +10,11 @@ Do not delete this page. Change the page title to the name of the tutorial and r
 
 ### Prerequisites
 
-The tutorial website must first be setup using the Digital Scholarship Tutorial theme. Access to the theme repository and to the Digital Scholarship OU Create account is necessary for this step. See the [theme repository](url) for more information.
+The tutorial website must first be setup using the Digital Scholarship Tutorial theme. Access to the theme repository and to the Digital Scholarship OU Create account is necessary for this step. See the [theme repository](https://github.com/TheoAcker12/digital-scholarship-tutorial) for more information.
 
 !! If the repository link gives you a 404, you probably do not have access.
 
 You will need to know how to use Grav (the basics) and how to write in Markdown. The required information will be provided in these pages.
-
-How to use the DS Tutorials Grav template once it is set up. To set up, you must have access to the [tutorial template repository](https://github.com/TheoAcker12/digital-scholarship-tutorial) (If you receive a 404 error, that is because you do not have access to it).
-
-Before following these instructions, make sure that a Digital Scholarship staff member has set up a Grav website using the Digital Scholarship Tutorial template. They will need a short title for the URL and the GitHub repository (e.g. grav, acrgis-storymaps-2020). Style rules: No capital letters, spaces, or special symbols. Only letters and numbers, with words separated by dashes.
-
-You may want to at least read through the [Grav tutorial](https://www.ds-tutorials.oucreate.com/grav) and/or check out (some of) the [Grav documentation](https://learn.getgrav.org).
 
 ## Tutorial Structure
 
