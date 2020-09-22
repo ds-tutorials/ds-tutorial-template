@@ -1,4 +1,20 @@
-# Template Info
+# Digital Scholarship Tutorial Template Info
+
+## Introduction
+
+Welcome to the Digital Scholarship tutorial template!
+
+Now that your initial website is set up, these sample pages will walk you through everything you need to know to create your tutorial. Since you will not want to keep these pages, it is strongly recommended to bookmark the [template demo website](https://www.ds-tutorials.oucreate.com/tutorial-template/), where all of this information can be found.
+
+Do not delete this page. Change the page title to the name of the tutorial and replace the contents with introductory information for learners. See the tutorial structure section for more information about what to include on the first page.
+
+### Prerequisites
+
+The tutorial website must first be setup using the Digital Scholarship Tutorial theme. Access to the theme repository and to the Digital Scholarship OU Create account is necessary for this step. See the [theme repository](url) for more information.
+
+!! If the repository link gives you a 404, you probably do not have access.
+
+You will need to know how to use Grav (the basics) and how to write in Markdown. The required information will be provided in these pages.
 
 How to use the DS Tutorials Grav template once it is set up. To set up, you must have access to the [tutorial template repository](https://github.com/TheoAcker12/digital-scholarship-tutorial) (If you receive a 404 error, that is because you do not have access to it).
 
@@ -6,56 +22,34 @@ Before following these instructions, make sure that a Digital Scholarship staff 
 
 You may want to at least read through the [Grav tutorial](https://www.ds-tutorials.oucreate.com/grav) and/or check out (some of) the [Grav documentation](https://learn.getgrav.org).
 
-## Set Up
+## Tutorial Structure
 
-The tutorial will be hosted on: `https://www.ds-tutorials.oucreate.com/title` (replace title with the short title for the tutorial as mentioned above). You will want to open this page so you can view your changes as you work. You will work from the admin panel, which will be found at `https://www.ds-tutorials.oucreate.com/title/admin`. A Digital Scholarship staff member will provide the username and password needed to log in.
+### First Chapter
 
-### Check for Updates
+The first chapter requires special configuration, so be sure not to delete the provided sample page. Instead, edit the page and replace the current title and content as follows:
 
-Click the **Check for Updates** button at the top right of the _Dashboard_. If there are any updates, install them.
+1. The title of the first chapter should be the same as the title of the tutorial/website.
+2. In *Chapter Options*, the subtitle should provide a brief description of the tutorial.
+3. In *Chapter Options*, the three pieces of metadata should be set (and updated later as needed) - lesson level, last updated, and created by.
+4. The page contents should include
+	1. A brief explanation of the tutorial contents and if possible an example of the finished product
+	2. Any previous knowledge or experience required
+	3. Any useful reference materials
+	4. Setup instructions for downloading data, installing software, etc.
 
-### Change the Introduction
+If the first page is missing for any reason, you can manually edit the header in expert mode to include the line `isIntro: true`.
 
-Go to the _Pages_ tab. The first page will be called _intro_. Click on this and go to the _Content_ tab. Replace the title with the title of the tutorial. This may be longer than the short title used in the URL. For example, _tableau-skyrim_ may become _Visualizing Data with Tableau_.
+### Folder Structure
 
-Then go to _Chapter Options_. Add a subtitle to serve as a brief description of the tutorial, choose the lesson level, and enter the date and your name. Remember to save when you're finished!
+You can nest chapters and pages inside folders if the tutorial requires additional structure. Be aware that a page should never serve as a folder/container for another page. Such a page will become inaccessible from the main navigation and may cause issues with the previous/next navigation.
 
-### Starting Pages
+The admin panel includes an *Add Folder* button in the Pages section for this purpose. Using this button will automatically create a folder that is visible but not routable. In general, as long as folders are visible but not routable, they should function as needed.
 
-The pages/folders _examples_ and _presentations_ have been included as an example of what you can do. You will want to delete these when you no longer need them.
+### Chapters and Pages
 
-## Adding Pages
+The contents of the tutorial will exist in normal pages (docs) or chapters. Chapters mark the beginning of a new section of content and will typically be the first page within a top level folder.
 
-To add a page, choose the **Add Documentation Page** button on the _Pages_ tab. Give the page a title and set the parent page as the chapter that the page belongs to. (If you aren't using chapters, the parent page will always be _/intro_). On the _Advanced_ tab for the new page make sure that **Folder Numeric Prefix** is Enabled. This last step is only necessary for the first page you add to a chapter. When adding additional pages to that chapter, Grav will recognize that the other pages for that chapter have numeric prefixes and will automatically add it to any new ones.
+- Chapters will have the option to include a subtitle.
+- The additional metadata (lesson level, etc.) in *Chapter Options* will be ignored by all but the first chapter.
+- All pages to include in the tutorial must have *Category* set to *docs*. This should happen automatically when creating a new docs or chapter page.
 
-For information about adding content and media, please see the [Grav documentation](https://learn.getgrav.org) or the [DS Grav tutorial](https://www.ds-tutorials.oucreate.com/grav) (also mentioned above).
-
-## Adding Chapters
-
-To add a chapter, choose the **Add Chapter** button on the _Pages_ tab. Under _Chapter Options_ you may want to give it a subtitle, but this is optional. You will want to make sure the page is not listed as an introduction.
-
-## Markdown Options
-
-Beyond the default markdown options, Grav has a number of fancy options added by a couple of plugins. Look for _Markdown Notices_ and the "shortcode" plugins (_Shortcode Core_ and _Shortcode UI_) on the _Plugins_ panel and view their readmes for more information.
-
-In markdown a piece of in-line code is marked with the \` mark on either side. A block of code begins with three of these (you can find more information in Grav's [markdown documentation](https://learn.getgrav.org/16/content/markdown). What is important here is that the template allows you to add a clipboard icon to any code section, which readers can use to easily copy the code. To use this feature, your inline code must look like: `` `CLIP: code here` `` and your block of code must look like:
-
-~~~md
-```
-CLIP: code here
-more code
-more code
-```
-~~~
-
-Adding "CLIP: " to the start of your code is very important.
-
-## Resizing Images (and more)
-
-If you want to resize an image you can add `?cropResize=width,height` to the end of your image URL. You must provide both numbers, but cropResize will scale the image so that it fits within the box you have specified but does not necessarily fill that box. (It will also cut off any empty space, so if you are resizing an image with the original dimensions of 400,400, `?cropResize=100,1000` and `?cropResize=200,100` should have no difference. This is the most likely function you will want to use, but the [Grav documentation](https://learn.getgrav.org/16/content/media) has information on a number of other functions.
-
-Example usage for an image named `my-image.png` within the folder of the page you are displaying it: `![alt text](my-image.png?cropResize=300,300)`
-
-## Updating
-
-Remember to change the date of last update on the first (intro) page. If you are updating a work that someone else has written, check for policy of how to write authors.
